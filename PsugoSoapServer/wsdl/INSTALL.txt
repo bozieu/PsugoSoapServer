@@ -1,0 +1,12 @@
+
+SYSTEM REQUIREMENTS
+-------------------
+
+DOM (this is enabled by default)
+http://php.net/manual/book.dom.php 
+
+INSTALLATION & GETTING STARTED
+------------------------------
+
+Application must include WSDLDocument.php
+See demo directory.

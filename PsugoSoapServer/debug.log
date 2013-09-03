@@ -1,0 +1,334 @@
+2013/09/02 18:37:08:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/02 18:37:08:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/02 18:37:08:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/02 18:37:08:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/02 18:37:08:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/02 18:37:08:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/02 18:37:08:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/02 18:37:08:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 ;
+2013/09/02 18:37:08:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/02 18:37:08:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:08:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:08:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:08:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/02 18:37:08:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:08:insert into PHOTO_CLASSE values ('', 45, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExif\0.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:08:insert into PROFESSEUR values ('', 45, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:08:insert into PHOTO_PROFESSEUR values ('', 37, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:08:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/02 18:37:08:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', '1', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/02 18:37:09:insert into PHOTO_DIRECTEUR values ('', 26, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')
+2013/09/02 20:19:41:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/02 20:19:41:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/02 20:19:41:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/02 20:19:41:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/02 20:19:41:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/02 20:19:41:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/02 20:19:41:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/02 20:19:41:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 ;
+2013/09/02 20:19:41:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/02 20:19:41:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:19:41:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:19:41:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:19:41:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:19:41:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/02 20:19:41:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/02 20:19:41:insert into PROFESSEUR values ('', 46, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:19:41:insert into PHOTO_PROFESSEUR values ('', 38, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:19:41:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => 1
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:19:41:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/02 20:19:41:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', '1', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:19:42:insert into PHOTO_DIRECTEUR values ('', 27, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')
+2013/09/02 20:23:24:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/02 20:23:24:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/02 20:23:24:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/02 20:23:24:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/02 20:23:24:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/02 20:23:24:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/02 20:23:24:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/02 20:23:24:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 ;
+2013/09/02 20:23:24:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/02 20:23:24:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:24:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:24:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:24:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:23:24:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/02 20:23:24:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:24:insert into PHOTO_CLASSE values ('', 47, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExif\0.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:24:insert into PROFESSEUR values ('', 47, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:25:insert into PHOTO_PROFESSEUR values ('', 39, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:25:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => 1
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:23:25:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/02 20:23:25:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', '1', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:23:25:insert into PHOTO_DIRECTEUR values ('', 28, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')
+2013/09/02 20:26:22:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/02 20:26:22:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/02 20:26:22:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/02 20:26:22:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/02 20:26:22:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/02 20:26:22:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/02 20:26:22:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/02 20:26:22:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 ;
+2013/09/02 20:26:22:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/02 20:26:22:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:26:23:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/02 20:26:23:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:insert into PHOTO_CLASSE values ('', 48, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExif\0.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:insert into PROFESSEUR values ('', 48, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:insert into PHOTO_PROFESSEUR values ('', 40, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => 1
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:26:23:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/02 20:26:23:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', '1', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:26:23:insert into PHOTO_DIRECTEUR values ('', 29, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')
+2013/09/02 20:27:44:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/02 20:27:44:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/02 20:27:44:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/02 20:27:44:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/02 20:27:44:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/02 20:27:44:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/02 20:27:44:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/02 20:27:44:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 ;
+2013/09/02 20:27:44:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/02 20:27:44:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:27:45:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/02 20:27:45:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:insert into PHOTO_CLASSE values ('', 49, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExif\0.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:insert into PROFESSEUR values ('', 49, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:insert into PHOTO_PROFESSEUR values ('', 41, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => 1
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:27:45:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/02 20:27:45:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', '1', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:45:insert into PHOTO_DIRECTEUR values ('', 30, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')
+2013/09/02 20:27:49:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/02 20:27:49:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/02 20:27:49:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/02 20:27:49:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/02 20:27:49:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/02 20:27:49:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/02 20:27:49:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/02 20:27:49:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 ;
+2013/09/02 20:27:49:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/02 20:27:49:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:49:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:49:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:49:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:27:49:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/02 20:27:49:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:49:insert into PHOTO_CLASSE values ('', 50, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExif\0.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:49:insert into PROFESSEUR values ('', 50, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:49:insert into PHOTO_PROFESSEUR values ('', 42, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:50:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => 1
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/02 20:27:50:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/02 20:27:50:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', '1', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/02 20:27:50:insert into PHOTO_DIRECTEUR values ('', 31, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')
