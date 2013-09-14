@@ -39,7 +39,7 @@ $return = $client->__soapCall("ListerSectionRurale",array(""));
 echo("\nListerSectionRurale: Dumping response:\n".$client->__getLastResponse());
 
 // EnvoyerInstitution
-$inst = new InstitutionDetail(1, "Nom Ecole", "OUEST", "PORT-AU-PRINCE (1ere)", "PORT-AU-PRINCE", "Ville", "adresse", "adresse détail", "514 607-9375", "Oui", "Privée");
+$inst = new InstitutionDetail(1, "Nom Ecole", "Artibonite", "Dessalines", "Desdunes", "1ER SECT. DE DESDUNES", "adresse", "adresse détail", "514 607-9375", "O", "U", 'BNQ-123456');
 
 $handle = fopen("./qq.jpg", "r");
 $contents = fread($handle, filesize("./qq.jpg"));

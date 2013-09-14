@@ -46,6 +46,11 @@ class Institution
 	/**
 	 * @var string
 	 */
+	public $telephone;
+
+	/**
+	 * @var string
+	 */
 	public $trouvee;
 
 	/**
@@ -53,8 +58,12 @@ class Institution
 	 */
 	public $systeme;
 
+	/**
+	 * @var string
+	 */
+	public $infoBancaire;
 
-	public function __construct($id, $nom_institution, $departement, $arrondissement, $commune, $section_rurale, $adresse, $adresse_detail, $trouvee, $systeme) {
+	public function __construct($id, $nom_institution, $departement, $arrondissement, $commune, $section_rurale, $adresse, $adresse_detail, $telephone, $trouvee, $systeme, $infoBancaire) {
 		$this->id = $id;
 		$this->nom_institution = $nom_institution;
 		$this->departement = $departement;
@@ -63,8 +72,10 @@ class Institution
 		$this->section_rurale = $section_rurale;
 		$this->adresse = $adresse;
 		$this->adresse_detail = $adresse_detail;
+		$this->telephone = $telephone;
 		$this->trouvee = $trouvee;
 		$this->systeme = $systeme;
+		$this->infoBancaire = $infoBancaire;
 	}
 }
 

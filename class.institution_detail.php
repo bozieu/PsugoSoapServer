@@ -63,8 +63,14 @@ class InstitutionDetail
 	 */
 	public $photo;
 
+	/**
+	 * @var string
+	 */
+	public $infoBancaire;
+
+
 	public function __construct($id, $nom_institution, $departement, $arrondissement, $commune, $section_rurale,
-								$adresse, $adresse_detail, $telephone, $trouvee, $systeme) {
+								$adresse, $adresse_detail, $telephone, $trouvee, $systeme, $infoBancaire) {
 		$this->id = $id;
 		$this->nomInstitution = $nom_institution;
 		$this->departement = $departement;
@@ -75,7 +81,9 @@ class InstitutionDetail
 		$this->adresseDetail=$adresse_detail;
 		$this->telephone=$telephone;
 		$this->instTrouvee=$trouvee;
+		$this->systeme=$systeme;
 		$this->photo=null;
+		$this->infoBancaire=$infoBancaire;
 	}
 }
 ?>

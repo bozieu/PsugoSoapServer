@@ -1,0 +1,917 @@
+allo, allo2013/09/08 20:31:16:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/08 20:31:16:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/08 20:31:16:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/08 20:31:16:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/08 20:31:16:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/08 20:31:16:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/08 20:31:16:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/08 20:31:16:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', systeme='P', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/08 20:31:16:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:31:16:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/08 20:31:16:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/08 20:31:16:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:31:16:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/08 20:31:16:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/08 20:37:53:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/08 20:37:53:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/08 20:37:53:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/08 20:37:53:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => OUEST
+    [arrondissement] => PORT-AU-PRINCE (1ere)
+    [commune] => PORT-AU-PRINCE
+    [sectionRurale] => Ville
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => Oui
+    [systeme] => P
+    [photo] => Array
+        (
+           
+.... TRUNCATE ....
+703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+)
+
+
+2013/09/08 20:37:53:select distinct dept_code from GEO_DEPT where nom_departement = 'OUEST'
+2013/09/08 20:37:53:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'PORT-AU-PRINCE (1ere)'
+2013/09/08 20:37:53:select distinct comm_code from GEO_COMMUNE where nom_commune = 'PORT-AU-PRINCE'
+2013/09/08 20:37:53:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = 'Ville'
+2013/09/08 20:37:53:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=8, arrond_code=, commune_code=111, sectionr_code=, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', systeme='P', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/08 20:37:53:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:37:53:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/08 20:37:53:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/08 20:37:54:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:37:54:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/08 20:37:54:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/08 20:41:45:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/08 20:41:45:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/08 20:41:45:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/08 20:41:45:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => Oui
+    [systeme] => P
+    [photo] => Array
+        (
+       
+.... TRUNCATE ....
+703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+)
+
+
+2013/09/08 20:41:45:select distinct dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/08 20:41:45:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'Dessalines'
+2013/09/08 20:41:45:select distinct comm_code from GEO_COMMUNE where nom_commune = 'Desdunes'
+2013/09/08 20:41:45:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/08 20:41:45:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', systeme='P', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/08 20:41:46:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:41:46:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/08 20:41:46:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/08 20:41:46:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:41:46:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/08 20:41:46:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/08 20:47:49:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/08 20:47:49:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/08 20:47:49:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/08 20:47:49:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => Oui
+    [systeme] => U
+    [photo] => Array
+        (
+       
+.... TRUNCATE ....
+703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+)
+
+
+2013/09/08 20:47:49:select distinct dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/08 20:47:49:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'Dessalines'
+2013/09/08 20:47:49:select distinct comm_code from GEO_COMMUNE where nom_commune = 'Desdunes'
+2013/09/08 20:47:49:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/08 20:47:49:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='Oui', systeme='U', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/08 20:47:49:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:47:49:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/08 20:47:49:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/08 20:47:50:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:47:50:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/08 20:47:50:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/08 20:49:58:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/08 20:49:58:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/08 20:49:58:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/08 20:49:58:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => O
+    [systeme] => U
+    [photo] => Array
+        (
+         
+.... TRUNCATE ....
+703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+)
+
+
+2013/09/08 20:49:58:select distinct dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/08 20:49:58:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'Dessalines'
+2013/09/08 20:49:58:select distinct comm_code from GEO_COMMUNE where nom_commune = 'Desdunes'
+2013/09/08 20:49:58:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/08 20:49:58:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='O', systeme='U', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/08 20:49:58:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:49:58:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/08 20:49:58:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/08 20:49:58:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/08 20:49:58:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/08 20:49:58:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/09 19:31:52:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/09 19:31:52:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme, numero_banque from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/09 19:31:52:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/09 19:31:52:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => O
+    [systeme] => U
+    [photo] => Array
+        (
+         
+.... TRUNCATE ....
+u2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+    [infoBancaire] => BNQ-123456
+)
+
+
+2013/09/09 19:31:52:select distinct dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/09 19:31:52:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'Dessalines'
+2013/09/09 19:31:52:select distinct comm_code from GEO_COMMUNE where nom_commune = 'Desdunes'
+2013/09/09 19:31:52:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/09 19:31:52:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='O', systeme='U', numero_banque = '', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/09 19:31:53:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:31:53:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/09 19:31:53:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/09 19:31:53:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:31:53:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/09 19:31:53:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/09 19:34:45:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/09 19:34:45:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme, numero_banque from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/09 19:34:45:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/09 19:34:45:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => O
+    [systeme] => U
+    [photo] => Array
+        (
+         
+.... TRUNCATE ....
+u2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+    [infoBancaire] => BNQ-123456
+)
+
+
+2013/09/09 19:34:45:select distinct dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/09 19:34:45:select distinct arron_code from GEO_ARRONDISSEMENT where nom_arrondissement = 'Dessalines'
+2013/09/09 19:34:45:select distinct comm_code from GEO_COMMUNE where nom_commune = 'Desdunes'
+2013/09/09 19:34:45:select distinct sectionr_code from GEO_SECTION_RURAL where nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/09 19:34:45:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='O', systeme='U', numero_banque = 'BNQ-123456', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/09 19:34:45:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:34:45:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/09 19:34:45:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/09 19:34:45:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:34:45:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/09 19:34:45:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/09 19:46:18:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/09 19:46:18:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme, numero_banque from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/09 19:46:18:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/09 19:46:18:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => O
+    [systeme] => U
+    [photo] => Array
+        (
+         
+.... TRUNCATE ....
+u2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+    [infoBancaire] => BNQ-123456
+)
+
+
+2013/09/09 19:46:18:select dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/09 19:46:18:select arron_code from GEO_ARRONDISSEMENT where dept_code = '1' and nom_arrondissement = 'Dessalines'
+2013/09/09 19:46:18:select distinct comm_code from GEO_COMMUNE where arron_code = '1' and nom_commune = 'Desdunes'
+2013/09/09 19:46:18:select distinct sectionr_code from GEO_SECTION_RURAL where comm_code = '1' and nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/09 19:46:18:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='O', systeme='U', numero_banque = 'BNQ-123456', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/09 19:46:18:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:46:18:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/09 19:46:18:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/09 19:46:18:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:46:18:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/09 19:46:18:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/09 19:48:44:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/09 19:48:44:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, trouvee, systeme, numero_banque from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/09 19:48:44:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/09 19:48:44:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => O
+    [systeme] => U
+    [photo] => Array
+        (
+         
+.... TRUNCATE ....
+u2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+    [infoBancaire] => BNQ-123456
+)
+
+
+2013/09/09 19:48:44:select dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/09 19:48:44:select arron_code from GEO_ARRONDISSEMENT where dept_code = '1' and nom_arrondissement = 'Dessalines'
+2013/09/09 19:48:44:select  comm_code from GEO_COMMUNE where arron_code = '1' and nom_commune = 'Desdunes'
+2013/09/09 19:48:44:select  sectionr_code from GEO_SECTION_RURAL where comm_code = '1' and nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/09 19:48:44:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='O', systeme='U', numero_banque = 'BNQ-123456', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/09 19:48:44:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:48:44:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/09 19:48:44:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/09 19:48:44:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/09 19:48:44:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/09 19:48:44:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:05:59:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/10 21:05:59:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, telephone, trouvee, systeme, numero_banque from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/10 21:05:59:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/10 21:05:59:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => O
+    [systeme] => U
+    [photo] => Array
+        (
+         
+.... TRUNCATE ....
+u2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+    [infoBancaire] => BNQ-123456
+)
+
+
+2013/09/10 21:05:59:select dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/10 21:05:59:select arron_code from GEO_ARRONDISSEMENT where dept_code = '1' and nom_arrondissement = 'Dessalines'
+2013/09/10 21:05:59:select  comm_code from GEO_COMMUNE where arron_code = '1' and nom_commune = 'Desdunes'
+2013/09/10 21:05:59:select  sectionr_code from GEO_SECTION_RURAL where comm_code = '1' and nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/10 21:05:59:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='O', systeme='U', numero_banque = 'BNQ-123456', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/10 21:05:59:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/10 21:06:00:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/10 21:06:00:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/10 21:06:00:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:insert into PHOTO_CLASSE values ('', 48, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExif\0.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:insert into PROFESSEUR values ('', 48, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:insert into PHOTO_PROFESSEUR values ('', 30, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/10 21:06:00:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/10 21:06:00:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:06:00:insert into PHOTO_DIRECTEUR values ('', 29, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:select name from phpgen_user where name = 'agent01' and password = '5304240';
+2013/09/10 21:15:05:select i.id, nom_institution, nom_departement, nom_arrondissement, nom_commune, nom_section_rurale, adresse, adresse_detail, telephone, trouvee, systeme, numero_banque from INSTITUTION i join (GEO_DEPT d, GEO_ARRONDISSEMENT a, GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR) on (i.dept_code = d.dept_code and i.arrond_code = a.arron_code and i.commune_code = c.comm_code and i.sectionr_code = s.sectionr_code and institution_id = i.id and (etat = 'F' or etat='V') and nom_inspecteur = 'agent01');
+2013/09/10 21:15:05:select nom_commune,  nom_section_rurale from INSTITUTION i join  (GEO_COMMUNE c, GEO_SECTION_RURAL s, INSPECTEUR insp) on c.comm_code = s.comm_code and c.comm_code = i.commune_code and i.id = insp.institution_id and (etat = 'F' or etat = 'V') and  nom_inspecteur = 'agent01';
+2013/09/10 21:15:05:EnvoyerInstitutionstdClass Object
+(
+    [id] => 1
+    [nomInstitution] => Nom Ecole
+    [departement] => Artibonite
+    [arrondissement] => Dessalines
+    [commune] => Desdunes
+    [sectionRurale] => 1ER SECT. DE DESDUNES
+    [adresse] => adresse
+    [adresseDetail] => adresse dÃ©tail
+    [telephone] => 514 607-9375
+    [instTrouvee] => O
+    [systeme] => U
+    [photo] => Array
+        (
+         
+.... TRUNCATE ....
+u2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+                    [longitude] => 12.1235
+                    [latitude] => 40.1235
+                    [datePhoto] => 2013-08-10 13:13:13
+                    [typePhoto] => 2
+                )
+
+        )
+
+    [infoBancaire] => BNQ-123456
+)
+
+
+2013/09/10 21:15:05:select dept_code from GEO_DEPT where nom_departement = 'Artibonite'
+2013/09/10 21:15:05:select arron_code from GEO_ARRONDISSEMENT where dept_code = '1' and nom_arrondissement = 'Dessalines'
+2013/09/10 21:15:05:select  comm_code from GEO_COMMUNE where arron_code = '1' and nom_commune = 'Desdunes'
+2013/09/10 21:15:05:select  sectionr_code from GEO_SECTION_RURAL where comm_code = '1' and nom_section_rurale = '1ER SECT. DE DESDUNES'
+2013/09/10 21:15:05:update INSTITUTION set nom_institution='Nom Ecole', etat='V', dept_code=1, arrond_code=1, commune_code=1, sectionr_code=1, adresse='adresse', adresse_detail='adresse dÃ©tail', telephone='514 607-9375', trouvee='O', systeme='U', numero_banque = 'BNQ-123456', rec_udp_ts=now(), rec_udp_uid='agent01' where id=1 and etat != 'T';
+2013/09/10 21:15:05:delete from PHOTO_INSTITUTION where institution_id = 1
+2013/09/10 21:15:05:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....34 lng:12.1234', '2013-08-10 12:12:12', 'D', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:insert into PHOTO_INSTITUTION values ('', 1, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '2', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:EnvoyerClassestdClass Object
+(
+    [instituionId] => 
+    [nomClasse] => 1A
+    [nombreEleve] => 100
+    [photoClasse] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAEAAAAAAAAAAAABAAAAAQAAAAEAAAAB/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsI
+.... TRUNCATE ....
+J+PWio93vRXFY1LWB2paKKACiiigAzipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/10 21:15:05:delete from CLASSE where institution_id = 1 and nom = '1A'
+2013/09/10 21:15:05:insert into CLASSE values ('', 1, '1A', '100',  YEAR(CURDATE()), now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:insert into PHOTO_CLASSE values ('', 49, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExif\0.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', '1', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:insert into PROFESSEUR values ('', 49, 'Nom prof', 'F', 'email prof', 'telephone prof', 'CIN prof', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:insert into PHOTO_PROFESSEUR values ('', 31, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bEx.... TRUNCATED ....40.1235 lng:12.1235', '2013-08-10 13:13:13', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:EnvoyerDirecteurstdClass Object
+(
+    [instituionId] => 
+    [nom] => Nom Directeur A
+    [genre] => M
+    [typeDirection] => A
+    [email] => qq@qq.com
+    [telephone] => 514 238-7510
+    [cin] => 123456
+    [photo] => stdClass Object
+        (
+            [photo] => /9j/4AAQSkZJRgABAQAAAQABAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAEAAAITAAMAAAABAAE
+.... TRUNCATE ....
+zipIz8woopAx1xGpX5uh64rx3X703epTzMDgvtRT/CBRRSexdPqZhcs3HGKu2tv5qH5yD1oopIubu0XtTX7PoVtbqxJmdpSx/DAriJxiVgeaKK6aJzyM65T97UJG3pRRXRAzA9K2/COhf8JDrS2PneSNu8tiiiqezCJ69oPhfTNAJFpEXuTwZ5OW/CtpjtBUAYXj60UVwSNhuaKKKRR//9k=
+            [longitude] => 12.1235
+            [latitude] => 40.1235
+            [datePhoto] => 2013-08-10 13:13:13
+            [typePhoto] => 1
+        )
+
+    [institutionId] => 1
+)
+
+
+2013/09/10 21:15:05:delete from DIRECTEUR where institution_id = 1 and nom = 'Nom Directeur A'
+2013/09/10 21:15:05:insert into DIRECTEUR values ('', 1, 'Nom Directeur A', 'M', 'A', 'qq@qq.com', '514 238-7510', '123456', now(), 'agent01', now(), 'agent01')
+2013/09/10 21:15:05:insert into PHOTO_DIRECTEUR values ('', 30, 'ÿØÿà\0JFIF\0\0\0\0\0\0ÿá\0bExi.... TRUNCATED ....35 lng:12.1235', '2013-08-10 13:13:13', now(), '1', 'agent01', now(), 'agent01')

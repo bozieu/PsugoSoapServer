@@ -19,7 +19,7 @@ require_once 'include/ConnectionManager.php';
 $telephone = $_REQUEST['t'];
 
 if(isset($_REQUEST['a']))
-
+	$apkName = $_REQUEST['a'];
 
 if(isset($telephone)){
 	$conManager = new ConManager();
